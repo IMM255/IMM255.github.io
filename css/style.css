@@ -128,13 +128,15 @@ section{
 
 .home-content h1{
     display: inline-block;
-    font-size: 5.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .home-content h1 span{
+    display: block;
     color: var(--text-color);
+    font-size: 5.6rem;
 }
 
 .home-content .text-job{
@@ -148,14 +150,14 @@ section{
 }
 
 .home-content p{
-    /* position: relative; */
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
 
 .home-sosmed{
     position: absolute;
-    bottom: 10rem;
+    bottom: 2rem;
     width: 300px;
     display: flex;
     justify-content: space-between;
@@ -166,8 +168,8 @@ section{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: transparent;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
@@ -181,17 +183,105 @@ section{
     background: var(--main-color);
     color: var(--bg-color);
     transition: .3s;
-
 }
 
 .home-imgHero{
-    position: absolute;
-    top: 7%;
+    top: 1%;
     right: 0;
     width: 45%;
     height: 100%;
     background: transparent;
     transition: 3s;
+}
+
+
+.about{
+    background: var(--second-bg-color);
+}
+
+.about-container{
+    display: flex;
+}
+
+.about-content{
+    max-width: 60%;
+}
+
+.about-content h3{
+    font-size: 2.8rem;
+}
+
+.about-content h3 span{
+    color: var(--main-color);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+
+.about-img{
+    margin: 2rem auto;
+    max-width: 40%;
+}
+
+.about-img img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px var(--bg-color);
+}
+
+.stack-title{
+    font-size: 1.3rem;
+}
+
+.stack{
+    padding-top: 10px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.stack img{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    font-size: 30px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+/* BREAKPOINTS */
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }   
+}
+
+@media (max-width:991px){
+    .header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home{
+        padding:  0 4%;
+    }
+
 }
 
 @media (max-width:768px){
@@ -233,14 +323,53 @@ section{
     .navbar.active a{
         transform: translateX(0);
         transition-delay: .25s;
+    }.home-content{
+        max-width: 55rem;
     }
 
     .home-imgHero{
         display: none;
     }
 
+    .home-content p{
+        margin: 1rem 0 2rem;
+        font-size: 1.2rem;
+    }
     
-.home-sosmed{
-    bottom: 5rem;
-}
+    .home-sosmed{
+        bottom: 4rem;
+        width: 200px;
+    }
+    .home-sosmed a{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .about-container{
+        display: block;
+    }
+
+        
+    .about-content{
+        max-width: 100%;
+    }
+
+
+    .about-img{
+        text-align: center;
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    /* .about-content h3{
+        text-align: center;
+    } */
+
+
+
+    .about-content p {
+        font-size: 1.2rem;
+        padding-bottom: .6em;
+    }
+    
 }
