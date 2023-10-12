@@ -9,6 +9,8 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'poppins',sans-serif;
+    transition: .2s linear;
+
 }
 
 :root{
@@ -87,20 +89,23 @@ section{
     padding: 10rem 9% 2rem;
 }
 
-.btn-box {
+
+
+.btn:hover{
+    color: var(--main-color);
+    background: var(--second-bg-color);
+}
+
+/* .btn-box{
     position: relative;
     display: flex;
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
-}
+} */
 
-.btn-box .btn:hover{
-    color: var(--main-color);
-    background: var(--second-bg-color);
-}
-
-.btn-box .btn{
+.btn{
+    padding: .5rem;
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -121,7 +126,7 @@ section{
 
 .heading{
         position: relative;
-        display: inline-block;
+        /* display: inline-block; */
         font-size: 5rem;
         margin-bottom: 3rem;
         text-align: center;
@@ -278,9 +283,7 @@ section{
     overflow: hidden;
 }
 
-
-
-.experience .title{
+.experience-container .title{
     position: relative;
     display: inline-block;
     font-size: 2.5rem;
@@ -366,8 +369,69 @@ section{
 .show-text .down-icon{
     display: none;
 }
-/* BREAKPOINTS */
 
+.project {
+    background: var(--second-bg-color);
+}
+
+.project-container  .btn-box{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(30rem, 1fr) );
+    gap: 1.5rem;
+}
+
+
+.card-project{
+    border:solid .2rem var(--main-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+
+.card-project:hover img {
+    transform: scale(1.2);
+}
+
+.card-project:hover h3{
+    padding-top: 2.4rem ;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.card-project:hover span{
+    color: var(--text-color);
+}
+
+
+
+.card-project img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-project h3{
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+.card-project p{
+    font-size: 1.3rem;
+    padding-bottom: 2.5rem;
+}
+
+.card-project span{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+/* BREAKPOINTS */
 @media(max-width:1200px){
     html{
         font-size: 55%;
@@ -475,6 +539,10 @@ section{
     .about-content p {
         font-size: 1.3rem;
         padding-bottom: .6em;
+    }
+
+    #experience{
+        min-height: 80vh;
     }
     
 }
