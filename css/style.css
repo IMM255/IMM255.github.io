@@ -94,6 +94,7 @@ section{
 .btn:hover{
     color: var(--main-color);
     background: var(--second-bg-color);
+    cursor: pointer;
 }
 
 /* .btn-box{
@@ -263,7 +264,7 @@ section{
 
 .stack{
     padding-top: 10px;
-    width: 120px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
 }
@@ -431,6 +432,98 @@ section{
     font-size: 1.4rem;
     color: var(--main-color);
 }
+
+
+
+.contact-container{
+    display: flex;
+    gap: 5rem;
+}
+
+.contact-text{
+    max-width: 50%;
+    align-self: center;
+}
+
+.contact-form{
+    width: 40%;
+}
+
+.contact-form label{
+    display: block;
+    font-size: 1.8rem;
+    padding-top: 1.4rem;
+}
+
+.contact-form .input-field input,
+.contact-form textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact-text h4{
+    font-size: 3rem;
+}
+
+.contact-text p{
+    font-size: 1.6rem;
+}
+
+.contact-text a{
+    display: inline-block;
+    padding-top: 1.4rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.contact-form .btn-box{
+    text-align: center;
+}
+
+.contact-form .btn-box .btn{
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.contact-sosmed a{
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+.footer{
+    position: relative;
+    background: var(--second-bg-color);
+    padding: 2rem 9%;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    display: flex;
+}
+
+.footer-iconTop{
+    position: relative;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+}
+
+.footer-iconTop a:hover{
+    background: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+
 /* BREAKPOINTS */
 @media(max-width:1200px){
     html{
@@ -544,5 +637,19 @@ section{
     #experience{
         min-height: 80vh;
     }
+
+
+    .contact-container{
+        display: block;
+    }
+    
+    .contact-text{
+        max-width: 100%;
+    }
+    
+    .contact-form{
+        width: 100%;
+    }
+    
     
 }
