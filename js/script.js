@@ -28,12 +28,3 @@ window.onscroll = () => {
 });
 }
 
-// show text
-let btnShowText = document.querySelectorAll('.experience-btn');
-
-btnShowText.forEach(function(btn){
-    btn.addEventListener('click',function(e){
-        const experience = e.currentTarget.parentElement.parentElement;
-        experience.classList.toggle("show-text");
-    })
-})
